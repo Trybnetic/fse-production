@@ -1,0 +1,478 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, h1, h2, h3, p,img, ol, ul, li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+
+/* own declarations */
+
+html, body {
+  height: 100%;
+}
+
+/* slightly stripe all tables */
+table tr:nth-child(2n){
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+table td {
+  padding: 5px;
+}
+
+body {
+  /* background: radial-gradient(ellipse at center, #113fc6 0%,#001c6b 100%);
+  background-repeat: no-repeat;
+  background-position: center; */
+
+  background: #000000;
+}
+
+#footer a {
+	text-decoration: underline;
+}
+
+#col-container a {
+  text-decoration: none;
+}
+
+.col-item-header i, #footer i { /* font-awesome icons */
+  padding-right: 8px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+  color: #ffffff;
+}
+
+/* declarations for bus table */
+
+#bus table {
+  width: 100%;
+}
+
+#bus tr td:nth-child(1){ /* first column of every table row */
+  text-align: right;
+  width: 30%;
+}
+
+#bus tr td:nth-child(2){
+  min-width: 50px;
+  width: 20%;
+  text-align: right;
+}
+
+#bus tr td:nth-child(3){
+  width: 50%;
+}
+
+/* declarations for food tile */
+
+.col-item {
+  overflow: hidden;
+}
+
+.foodtable {
+  width: 100%;
+}
+
+.foodtable tr td:first-child {
+  width: 80%;
+}
+
+.foodtable tr td:nth-child(2) {
+  width: 20%;
+  text-align: center;
+}
+
+.food_date {
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+
+/* declarations for event calendar tile */
+
+
+#calendar table {
+  width: 100%;
+}
+
+#calendar tr td:nth-child(1){ /* first column of every table row */
+  text-align: right;
+  width: 25%;
+  line-height: 1em;
+}
+
+#calendar tr td:nth-child(2){
+  width: 75%;
+  text-align: left;
+}
+
+#calendar #date {
+  font-weight: bolder;
+}
+
+#calendar .small {
+  font-size: 0.8em;
+}
+
+#sitzung img {
+  max-height: 50px;
+}
+
+#sitzung table {
+  width: 100%;
+}
+
+#sitzung td {
+  width: 50%;
+  text-align: center;
+}
+
+/* declarations for weather tile */
+
+#weathericons { /* humidity, rain etc. */
+  text-align: left;
+  width: 49%;
+  padding-left: 10px;
+  float: left;
+  font-size: 0.9em;
+}
+
+#weathericons > div {
+  vertical-align: bottom;
+}
+
+#weathericons > div:before {
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px 0 0;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.icon-weather:before {
+  background: url(../img/icon-weather.svg);
+}
+
+.icon-rain:before {
+  background: url(../img/icon-rain.svg);
+}
+
+.icon-raintype:before {
+  background: url(../img/icon-raintype.svg);
+}
+
+.icon-clouds:before {
+  background: url(../img/icon-clouds.svg);
+}
+
+.icon-humidity:before {
+  background: url(../img/icon-humidity.svg);
+}
+
+.icon-pressure:before {
+  background: url(../img/icon-pressure.svg);
+}
+
+#temperature {
+  text-align: right;
+  float: right;
+  width: 48%;
+}
+
+#temperature div { /* temperature and wind display */
+  font-size: 1.5em;
+  padding-right: 10px;
+}
+
+#temperature:after {
+  clear: both;
+}
+
+#footer-left {
+  text-align: left;
+}
+
+#footer-right {
+  text-align: right;
+}
+
+.footerbox {
+  width: 49%;
+  display: inline-block;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#header {
+  height: 80px;
+  line-height: 80px;
+  padding: 10px;
+  margin: 0px 20px 0px 20px;
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+}
+
+#header:after {
+  clear: both;
+}
+
+#header-left {
+  text-align: left;
+}
+
+#header-left img {
+  position: absolute;
+}
+
+#header-left h2 {
+  position: absolute;
+  left: 540px;
+}
+
+#header h2 {
+  display: inline;
+}
+
+#header-center{
+  text-align: center;
+  font-size: 1.6em;
+}
+
+#header-right {
+  text-align: right;
+}
+
+.headerbox {
+  width: 33%;
+  display: inline-block;
+}
+
+#time {
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+
+.col {
+  float: left;
+  width: 475px; /* for four column layout */
+}
+
+.height1 {
+  height: 220px;
+}
+
+.height2 {
+  height: 450px;
+}
+
+.height3 {
+  height: 680px;
+}
+
+.height4 {
+  height: 910px;
+}
+
+#col-container {
+  width: 1900px;
+  height: auto;
+  margin: auto;
+}
+
+.col-item {
+  margin: 10px 5px 10px 5px;
+  padding: 5px 10px 5px 10px;
+  box-sizing: border-box; /* thank god for this property */
+  background-color: #bdc3c7;
+  color: #ffffff;
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+.hoverable:hover {
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.8);
+}
+
+/* declarations for 'know your fachschaft' */
+
+#person-name {
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+#person-image {
+  float: left;
+  width: 30%;
+  height: 60%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+#person-text {
+  float: right;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 70%;
+  height: 60%;
+  font-size: 0.9em;
+  padding-left: 10px;
+}
+
+#person-text:after {
+  clear: both;
+}
+
+#person-text table {
+  width: 100%;
+}
+
+#ad-image {
+  height: 80%;
+  background: no-repeat center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.col-item-header {
+  text-align: center;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  padding: 5px;
+}
+
+.col-item-header > i {
+  /* this allows us to style the fontawesome icons */
+  font-size: 1.2em;
+}
+
+/* color assignment for different box types */
+.purple {
+  background-color: #9b59b6;
+}
+
+.blue {
+  background-color: #3498db;
+}
+
+.orange {
+  background-color: #f39c12;
+}
+
+.green {
+  background-color: #27ae60;
+}
+
+.red {
+  background-color: #c0392b;
+}
+
+.darkgrey {
+  background-color: #2c3e50;
+}
+
+#footer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  background-color: rgba(0,0,0,0.2);
+  color: #ffffff;
+  position: fixed;
+  /* padding: 10px 20px 10px 10px; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#footer a {
+  color: #ffffff;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+#footer a:visited {
+  color: #eeeeee;
+}
+
+@media screen and (max-width:1900px) {
+
+  body {
+    background: linear-gradient(to right, #606c88 0%,#3f4c6b 100%);
+    background-repeat: repeat-y;
+  }
+
+  #col-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #header {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 20px auto auto;
+  }
+
+  #header-left h2 {
+    visibility: hidden;
+  }
+
+  #header-left img {
+    position: static;
+  }
+
+  .headerbox {
+    width: 100%;
+    display: block;
+    text-align: center !important;
+  }
+
+  .footerbox {
+    width: 100%;
+    display: block;
+    text-align: left !important;
+  }
+
+  .col {
+    width: 90%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col-item {
+    margin: 10px;
+    /* height: auto !important; */
+  }
+
+  #footer {
+    position: static;
+  }
+
+  #footer span { /* hides repo url in footer if on mobile */
+    visibility: hidden;
+  }
+}
